@@ -1,5 +1,21 @@
 import pytest
-from src.predict import RandomMnistGenerator
+import numpy as np
+# from src.predict import RandomMnistGenerator
+
+
+class RandomMnistGenerator:
+    def __init__(self, seed_):
+        self.seed_ = seed_
+
+    def generate_sparse_array(self, len):
+        np.random.seed(self.seed_)
+        shape = (len, 28, 28, 1)
+        random_array = np.random.rand(*shape)
+        threshold = 0.1
+        # Generate a random array with values between 0 and 1. threshold for it to look like mnist
+        sparse_array = np.where(random_array < threshold, np.random.uniform(0, 1), 0)
+        print('Size of sparse array: {}'.format(sparse_array.shape))
+        return sparse_array
 
 
 @pytest.fixture(scope="session", autouse=True)
