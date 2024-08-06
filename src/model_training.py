@@ -1,7 +1,8 @@
 import time
 import numpy as np
 from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, BatchNormalization
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+#, BatchNormalization
 from src.config import PathConfig
 
 
