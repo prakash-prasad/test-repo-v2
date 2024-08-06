@@ -1,5 +1,4 @@
 import numpy as np
-import keras
 from keras import models
 from src.config import PathConfig
 

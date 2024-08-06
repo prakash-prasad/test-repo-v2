@@ -1,5 +1,4 @@
 import numpy as np
-import keras
 from keras import models
 from src.config import PathConfig
 
@@ -32,3 +31,4 @@ prediction_array = prediction_data_generator.generate_sparse_array(len=20)
 prediction = model.predict(prediction_array)
 best_classes = np.argmax(prediction, axis=1)
 print(f'Prediction on random array: {best_classes}')
+

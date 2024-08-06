@@ -1,7 +1,5 @@
 import numpy as np
-import tensorflow as tf
 
-import keras
 from keras.datasets import mnist
 from keras.utils import to_categorical
 
