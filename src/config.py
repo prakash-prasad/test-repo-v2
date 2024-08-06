@@ -1,5 +1,6 @@
 import os
 
+
 class PathConfig:
     def __init__(self):
         self.prev_dir = os.path.dirname(os.getcwd())
