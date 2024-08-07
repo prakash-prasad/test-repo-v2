@@ -1,12 +1,11 @@
 import time
-import numpy as np
 import mlflow
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 #  BatchNormalization
 from src.config import PathConfig
 from src.model_training import get_train_data
-import os
+
 
 if __name__ == '__main__':
     config = PathConfig()
@@ -25,7 +24,7 @@ if __name__ == '__main__':
     ])
 
     hyp_dict = {'optimizer': 'adam', 'loss_function': 'categorical_crossentropy',
-                'batch_size': 128, 'epochs': 3, 'dropout_rate': 0.5}
+                'batch_size': 64, 'epochs': 7, 'dropout_rate': 0.1}
 
     # Compile model
     model1.compile(optimizer=hyp_dict['optimizer'], loss=hyp_dict["loss_function"], metrics=['accuracy'])
@@ -51,7 +50,7 @@ if __name__ == '__main__':
         start_time = time.time()
         print('epochs count {}'.format(hyp_dict['epochs']))
         history = model1.fit(x_train, y_train, batch_size=hyp_dict['batch_size'], epochs=hyp_dict['epochs'],
-                            verbose=1, validation_split=0.1)
+                             verbose=1, validation_split=0.1)
         training_time = time.time() - start_time
 
         # Log metrics

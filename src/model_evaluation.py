@@ -12,13 +12,14 @@ def get_test_data(config):
     return x_test, y_test
 
 
-config = PathConfig()
-x_test, y_test = get_test_data(config)
+if __name__ == '__main__':
+    config = PathConfig()
+    x_test, y_test = get_test_data(config)
 
-# Read saved model
-model = models.load_model(config.classifier_model_path)
+    # Read saved model
+    model = models.load_model(config.classifier_model_path)
 
-# Evaluate the model
-score = model.evaluate(x_test, y_test, verbose=66)
-print(f'Test loss: {score[0]}')
-print(f'Test accuracy: {score[1]}')
+    # Evaluate the model
+    score = model.evaluate(x_test, y_test, verbose=66)
+    print(f'Test loss: {score[0]}')
+    print(f'Test accuracy: {score[1]}')

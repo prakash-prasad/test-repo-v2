@@ -18,16 +18,17 @@ class RandomMnistGenerator:
         return sparse_array
 
 
-# Read saved model
-config = PathConfig()
-print('loading model from: {}'.format(config.classifier_model_path))
-model = models.load_model(config.classifier_model_path)
+if __name__ == '__main__':
+    # Read saved model
+    config = PathConfig()
+    print('loading model from: {}'.format(config.classifier_model_path))
+    model = models.load_model(config.classifier_model_path)
 
-# Generate mnist like sparse array
-prediction_data_generator = RandomMnistGenerator(seed_=3)
-prediction_array = prediction_data_generator.generate_sparse_array(len=20)
+    # Generate mnist like sparse array
+    prediction_data_generator = RandomMnistGenerator(seed_=3)
+    prediction_array = prediction_data_generator.generate_sparse_array(len=20)
 
-# Evaluate the model
-prediction = model.predict(prediction_array)
-best_classes = np.argmax(prediction, axis=1)
-print(f'Prediction on random array: {best_classes}')
+    # Evaluate the model
+    prediction = model.predict(prediction_array)
+    best_classes = np.argmax(prediction, axis=1)
+    print(f'Prediction on random array: {best_classes}')
