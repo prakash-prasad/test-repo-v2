@@ -10,3 +10,4 @@ class PathConfig:
         self.test_dependent_data_path = os.path.join(self.prev_dir, 'data/test_dependent.npy')
 
         self.classifier_model_path = os.path.join(self.prev_dir, 'models/mnist_classifier_v1.keras')
+        self.mlflow_tracking_path = os.path.join(self.prev_dir, 'src/mlflow_tracking')

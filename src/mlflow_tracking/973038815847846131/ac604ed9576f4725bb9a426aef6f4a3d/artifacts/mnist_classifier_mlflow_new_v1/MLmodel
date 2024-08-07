@@ -1,0 +1,18 @@
+artifact_path: mnist_classifier_mlflow_new_v1
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.4.1
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.11.9
+mlflow_version: 2.15.1
+model_size_bytes: 2735752
+model_uuid: d0411d2c5b4648649be7b66fcdb5e645
+run_id: ac604ed9576f4725bb9a426aef6f4a3d
+utc_time_created: '2024-08-07 09:34:19.842522'

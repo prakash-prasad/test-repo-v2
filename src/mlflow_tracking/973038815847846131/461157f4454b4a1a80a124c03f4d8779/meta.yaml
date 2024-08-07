@@ -1,0 +1,15 @@
+artifact_uri: file:///C:\Users\praka\Acads\M_Tech\new_git_test\test-repo-v2\src/mlflow_tracking/973038815847846131/461157f4454b4a1a80a124c03f4d8779/artifacts
+end_time: 1723022801548
+entry_point_name: ''
+experiment_id: '973038815847846131'
+lifecycle_stage: active
+run_id: 461157f4454b4a1a80a124c03f4d8779
+run_name: redolent-cod-158
+run_uuid: 461157f4454b4a1a80a124c03f4d8779
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723022783054
+status: 4
+tags: []
+user_id: praka

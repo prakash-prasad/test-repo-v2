@@ -1,0 +1,15 @@
+artifact_uri: file:///C:\Users\praka\Acads\M_Tech\new_git_test\test-repo-v2\src/mlflow_tracking/973038815847846131/ac604ed9576f4725bb9a426aef6f4a3d/artifacts
+end_time: 1723023267440
+entry_point_name: ''
+experiment_id: '973038815847846131'
+lifecycle_stage: active
+run_id: ac604ed9576f4725bb9a426aef6f4a3d
+run_name: tasteful-wren-175
+run_uuid: ac604ed9576f4725bb9a426aef6f4a3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723023242659
+status: 3
+tags: []
+user_id: praka

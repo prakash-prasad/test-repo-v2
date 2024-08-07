@@ -26,6 +26,6 @@ print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 
 config = PathConfig()
 np.save(config.train_independent_data_path, x_train)
-np.save(config.train_dependent_data_path, x_test)
-np.save(config.test_independent_data_path, y_train)
+np.save(config.train_dependent_data_path, y_train)
+np.save(config.test_independent_data_path, x_test)
 np.save(config.test_dependent_data_path, y_test)

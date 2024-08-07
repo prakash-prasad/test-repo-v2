@@ -6,12 +6,12 @@ from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from src.config import PathConfig
 
 
-def get_train_data(config):
+def get_train_data(config: PathConfig) -> tuple:
     # x_train = np.load('/Users/prakash.prasad/Desktop/masters/sem3/mlops/test-repo-v2/data/train_independent.npy')
     # y_train = np.load('/Users/prakash.prasad/Desktop/masters/sem3/mlops/test-repo-v2/data/train_dependent.npy')
     x_train = np.load(config.train_independent_data_path)
     y_train = np.load(config.train_dependent_data_path)
-    return x_train, y_train
+    return (x_train, y_train)
 
 
 config = PathConfig()
