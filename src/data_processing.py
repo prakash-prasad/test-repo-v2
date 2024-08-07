@@ -5,6 +5,8 @@ from keras.utils import to_categorical
 
 from src.config import PathConfig
 
+train_data_size, test_data_size = 300, 200
+
 # Load MNIST data
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
@@ -18,7 +20,7 @@ y_test = to_categorical(y_test, 10)
 
 print('shapes of x train and test, y train and test v1: ')
 print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
-train_data_size, test_data_size = 500, 100
+
 x_train = x_train[:train_data_size]
 y_train = y_train[:train_data_size]
 x_test = x_test[:test_data_size]
