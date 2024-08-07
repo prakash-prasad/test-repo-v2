@@ -3,10 +3,10 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - feature/mlflow_test
+      - dev
   pull_request:
     branches:
-      - feature/mlflow_test
+      - dev
 
 jobs:
   lint:
