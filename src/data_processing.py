@@ -16,7 +16,14 @@ x_test = x_test.reshape(-1, 28, 28, 1).astype('float32') / 255
 y_train = to_categorical(y_train, 10)
 y_test = to_categorical(y_test, 10)
 
-print('shapes of x train and test, y train and test: ')
+print('shapes of x train and test, y train and test v1: ')
+print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
+train_data_size, test_data_size = 500, 100
+x_train = x_train[:train_data_size]
+y_train = y_train[:train_data_size]
+x_test = x_test[:test_data_size]
+y_test = y_test[:test_data_size]
+print('shapes of x train and test, y train and test v2: ')
 print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 
 # np.save('/Users/prakash.prasad/Desktop/masters/sem3/mlops/test-repo-v2/data/train_independent.npy', x_train)
